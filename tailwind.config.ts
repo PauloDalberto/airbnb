@@ -9,8 +9,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        background: "#FFFFFF", // Branco puro (fundo principal)
+        black: "#000000", // Preto suave (textos principais)
+        lightGray: "#F7F7F7", // Cinza claro (fundo secundário)
+        mediumGray: "#717171", // Cinza médio (textos secundários)
+        highlight: "#FF385C", // Vermelho (destaques como botões)
+        hover: "#EBF3FF", // Azul claro translúcido (hover e interatividade)
+        gold: "#FFB400", // Dourado (estrelas de avaliação)
       },
     },
   },
