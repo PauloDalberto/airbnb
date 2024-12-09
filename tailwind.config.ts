@@ -9,13 +9,25 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "#FFFFFF", // Branco puro (fundo principal)
-        black: "#000000", // Preto suave (textos principais)
-        lightGray: "#F7F7F7", // Cinza claro (fundo secundário)
-        mediumGray: "#717171", // Cinza médio (textos secundários)
-        highlight: "#FF385C", // Vermelho (destaques como botões)
-        hover: "#EBF3FF", // Azul claro translúcido (hover e interatividade)
-        gold: "#FFB400", // Dourado (estrelas de avaliação)
+        black: "#000000",
+        lightGray: "#F7F7F7", 
+        mediumGray: "#717171", 
+        highlight: "#FF385C",
+        hover: "#EBF3FF",
+        white: "#FFFFFF",
+        gray2: "#F7F7F7",
+        gray3: "#E8E8E8",
+        gray4: "#CCCCCC",
+        gray5: "#B8B8B8",
+        gray6: "#A3A3A3",
+        gray7: "#8F8F8F",
+        gray8: "#7A7A7A",
+        gray9: "#666666",
+        gray10: "#525252",
+        gray11: "#3D3D3D",
+        gray12: "#292929",
+        gray13: "#1F1F1F",
+        gray14: "#0F0F0F",
       },
     },
   },
