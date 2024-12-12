@@ -28,6 +28,8 @@ export default {
         gray12: "#292929",
         gray13: "#1F1F1F",
         gray14: "#0F0F0F",
+        b1: "#157AFF",
+        b2: "#6eadff",
       },
     },
   },
