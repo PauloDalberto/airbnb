@@ -19,6 +19,7 @@ export default function Header(){
 
         <div 
           className="flex gap-2 items-center rounded-3xl border py-2 px-4 border-[mediumGray] cursor-pointer hover:scale-105 hov"
+          onClick={() => console.log('oi')}
         >
           <Bars4Icon width={24} height={24}/>
           <UserCircleIcon width={36} height={36}/>
