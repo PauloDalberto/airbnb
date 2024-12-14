@@ -11,7 +11,7 @@
   "dependencies": {
     "@heroicons/react": "^2.2.0",
     "@hookform/resolvers": "^3.9.1",
-    "@nextui-org/modal": "^2.2.5",
+    "@radix-ui/react-dialog": "^1.1.3",
     "airbnb": "file:",
     "next": "15.0.4",
     "react": "^19.0.0",
