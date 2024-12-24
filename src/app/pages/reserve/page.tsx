@@ -1,43 +1,33 @@
 'use client'
 
-import { listHouses } from "@/app/api/houses/houses";
 import HousesCard from "@/app/components/housesCard/housesCard";
-import { useEffect, useState } from "react";
+import useFetchHouses from "@/app/hooks/houses/useFetchHouse";
+import { useSearch } from "@/app/hooks/context/SearchContext";
 
-export default function Reserve(){
-  const [houses, setHouses] = useState([])
+export default function Reserve() {
+  const { houses } = useFetchHouses();
+  const { search } = useSearch(); 
 
-  useEffect(() => {
-    const fetchHouses = async () => {
-      try{
-        const data = await listHouses(true);
-        setHouses(data)
-      }
-      catch (error){
-        console.log("Esse erro: ", error)
-      }
-    }
+  const filteredHouses = houses.filter((house) =>
+    house.description.toLowerCase().includes(search.toLowerCase())
+  );
 
-    fetchHouses();
-  }, [])
-
-  return(
-    <div className="flex gap-6">
-      {houses.length > 0 ? (
-        houses.map((house: HouseCard) => (
-          <HousesCard 
+  return (
+    <div className="flex gap-6 flex-wrap" suppressHydrationWarning>
+      {filteredHouses.length > 0 ? (
+        filteredHouses.map((house: HouseCard) => (
+          <HousesCard
             key={house.id}
-            id={house.id} 
-            name={house.name} 
-            location={house.location} 
-            price={house.price} 
-            thumbnail={house.thumbnail} 
+            id={house.id}
+            description={house.description}
+            location={house.location}
+            price={house.price}
+            thumbnail_url={house.thumbnail_url}
           />
-
         ))
       ) : (
-        <p>No momento nao temos casas disponiveis</p>
+        <p>No momento não temos casas disponíveis</p>
       )}
     </div>
-  )
+  );
 }

@@ -1,7 +1,7 @@
 interface HouseCard{
   id: string;
-  name: string;
+  description: string;
   location: string;
   price: number;
-  thumbnail: string;
+  thumbnail_url: string;
 }
